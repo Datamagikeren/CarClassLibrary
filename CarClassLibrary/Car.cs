@@ -1,4 +1,6 @@
-﻿namespace CarClassLibrary
+﻿using System;
+
+namespace CarClassLibrary
 {
     public class Car
     {
@@ -23,10 +25,15 @@
         }
         public void ValidateLicensePlate()
         {
+            if (LicensePlate == null)
+            {
+                throw new ArgumentNullException("Nummerplade må ikke være null");
+            }
             if (LicensePlate.Length < 2 || LicensePlate.Length > 7) 
             {
                 throw new ArgumentOutOfRangeException("Nummerpladen skal være på mere end 2 tegn, og må ikke være mere end 7");
             }
+           
         }
 
     }
