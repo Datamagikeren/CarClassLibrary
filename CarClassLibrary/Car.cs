@@ -7,7 +7,7 @@ namespace CarClassLibrary
         public int ID { get; set; }
         public string? Model { get; set; }
         public int Price { get; set; }
-        public string? LicensePlate { get; set; }
+        public string? LicensePlate  { get; set; }
 
         public void ValidateModel()
         {
